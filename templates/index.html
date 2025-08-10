@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection and Explanation</title>
+</head>
+<body>
+    <h2>📰 Enter News Text</h2>
+    <form method="post">
+        <textarea name="news" rows="10" cols="60" placeholder="Paste news article here..."></textarea><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+
+    {% if prediction %}
+        <h3>📢 Prediction: {{ prediction }}</h3>
+        <h4>🔢 Confidence: {{ confidence }}%</h4>
+        <p><strong>🧠 Explanation:</strong><br>{{ explanation }}</p>
+    {% endif %}
+</body>
+</html>
